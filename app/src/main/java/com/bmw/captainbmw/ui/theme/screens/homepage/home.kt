@@ -88,6 +88,11 @@ fun Home(navController: NavHostController) {
             Text("Register",
                 fontSize = 20.sp)
         }
+        Spacer(modifier = Modifier.height(30.dp))
+        Button(onClick = {navController.navigate(ROUTE_REGISTER)},
+            modifier = Modifier.width(400.dp)) {
+            Text("Dashboard",
+                fontSize = 20.sp)
         }
 
 
