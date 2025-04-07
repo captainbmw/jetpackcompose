@@ -8,6 +8,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.bmw.captainbmw.ui.theme.screens.dashboard.Dashboard_Screen
 import com.bmw.captainbmw.ui.theme.screens.homepage.Home
 import com.bmw.captainbmw.ui.theme.screens.loginpage.Login_Screen
 import com.bmw.captainbmw.ui.theme.screens.register.Register_Screen
@@ -32,6 +33,7 @@ fun AppNavHost(modifier: Modifier = Modifier,navController: NavHostController= r
             Splash_page(navController)
         }
         composable(ROUTE_DASHBOARD){
+            Dashboard_Screen()
 
         }
     }
