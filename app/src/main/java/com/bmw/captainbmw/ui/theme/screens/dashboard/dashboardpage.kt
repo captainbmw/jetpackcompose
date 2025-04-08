@@ -149,7 +149,7 @@ fun ActionItem(action: QuickAction) {
 
 @Preview
 @Composable
-private fun dashboard() {
+private fun Dashboard() {
     Dashboard_Screen()
 
 }
