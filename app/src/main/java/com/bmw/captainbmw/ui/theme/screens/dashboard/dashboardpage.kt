@@ -71,9 +71,11 @@ fun StatsSection(stats: List<DashBoardStat>) {
         modifier = Modifier.fillMaxWidth()
     ){
 
-//        stats.forEach(
-//            StatCard()
-//        )
+        stats.forEach{
+            StatCard(it)
+        }
+
+
     }
 //
 }
@@ -113,9 +115,11 @@ fun QuickActions(actions:List<QuickAction>) {
         modifier = Modifier.padding(bottom = 8.dp)
     )
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-//        actions.forEach(
-//            ActionItem(action=)
-//        )
+        actions.forEach{
+            ActionItem(it)
+        }
+
+
 
     }
 
