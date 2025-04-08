@@ -40,17 +40,22 @@ fun Home(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top
     ) {
-        Row(modifier = Modifier
-            .fillMaxWidth()
-            .background(Color.Blue)
-            .padding(20.dp)) {
-            Text("Home",
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color.Blue)
+                .padding(20.dp)
+        ) {
+            Text(
+                "Home",
                 color = Color.Black,
                 modifier = Modifier.clickable { navController.navigate(ROUTE_HOME) })
-            Text("Login",
+            Text(
+                "Login",
                 color = Color.Black,
                 modifier = Modifier.clickable { navController.navigate(ROUTE_LOGIN) })
-            Text("Register",
+            Text(
+                "Register",
                 color = Color.Black,
                 modifier = Modifier.clickable { navController.navigate(ROUTE_REGISTER) })
         }
@@ -61,47 +66,61 @@ fun Home(navController: NavHostController) {
             fontFamily = FontFamily.Cursive
         )
         Spacer(modifier = Modifier.height(40.dp))
-        Image(painter = painterResource(id = R.drawable.bmw6),
+        Image(
+            painter = painterResource(id = R.drawable.bmw6),
             contentDescription = "bmw6",
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
-                )
+        )
 
 
         Spacer(modifier = Modifier.height(20.dp))
-        Text("The best car in the world with the best engine power. It can go 200km/hr.",
+        Text(
+            "The best car in the world with the best engine power. It can go 200km/hr.",
             color = Color.Black,
             fontSize = 20.sp,
             fontFamily = FontFamily.Monospace
         )
         Spacer(modifier = Modifier.height(30.dp))
-        Button(onClick = {navController.navigate(ROUTE_LOGIN)},
-            modifier = Modifier.width(400.dp)) {
-            Text("Login",
-                fontSize = 20.sp)
+        Button(
+            onClick = { navController.navigate(ROUTE_LOGIN) },
+            modifier = Modifier.width(400.dp)
+        ) {
+            Text(
+                "Login",
+                fontSize = 20.sp
+            )
 
-            }
-        Spacer(modifier = Modifier.height(30.dp))
-        Button(onClick = {navController.navigate(ROUTE_REGISTER)},
-            modifier = Modifier.width(400.dp)) {
-            Text("Register",
-                fontSize = 20.sp)
         }
         Spacer(modifier = Modifier.height(30.dp))
-        Button(onClick = {navController.navigate(ROUTE_REGISTER)},
-            modifier = Modifier.width(400.dp)) {
-            Text("Dashboard",
-                fontSize = 20.sp)
+        Button(
+            onClick = { navController.navigate(ROUTE_REGISTER) },
+            modifier = Modifier.width(400.dp)
+        ) {
+            Text(
+                "Register",
+                fontSize = 20.sp
+            )
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Button(
+            onClick = { navController.navigate(ROUTE_REGISTER) },
+            modifier = Modifier.width(400.dp)
+        ) {
+            Text(
+                "Dashboard",
+                fontSize = 20.sp
+            )
         }
 
 
     }
 
+}
 
 @Preview
 @Composable
-private fun Screen() {
+private fun screen() {
     Home(rememberNavController())
-
 }
